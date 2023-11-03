@@ -1,0 +1,12 @@
+{
+  "manifest_version": 2,
+  "name": "stop-copy-with-copyright",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["https://juejin.cn/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "permissions": ["tabs", "https://juejin.cn/*"]
+}
