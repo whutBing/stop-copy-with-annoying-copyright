@@ -1,12 +1,13 @@
 {
-  "manifest_version": 2,
-  "name": "stop-copy-with-copyright",
-  "version": "1.0",
+  "manifest_version": 3,
+  "name": "copy-without-copyright",
+  "version": "1.0.1",
+  "description": "一个可以阻挡复制时带有多余版权信息的插件",
   "content_scripts": [
     {
-      "matches": ["https://juejin.cn/*"],
-      "js": ["contentScript.js"]
+      "matches": ["https://*/*"],
+      "js": ["src/main.js"]
     }
   ],
-  "permissions": ["tabs", "https://juejin.cn/*"]
+  "host_permissions": ["https://www.juejin.cn/*", "https://blog.csdn.net/*"]
 }
