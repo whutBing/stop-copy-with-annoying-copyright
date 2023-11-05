@@ -9,7 +9,16 @@
       "js": ["src/main.js"]
     }
   ],
+  "background": {
+    "service_worker": "src/service_worker.js"
+  },
   "host_permissions": ["https://www.juejin.cn/*", "https://blog.csdn.net/*"],
+  "action": {
+    "default_icon": {
+      "16": "assets/16stop.png",
+      "32": "assets/32stop.png"
+    }
+  },
   "icons": {
     "16": "assets/16stop.png",
     "32": "assets/32stop.png",
