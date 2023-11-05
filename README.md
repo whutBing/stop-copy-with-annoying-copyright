@@ -49,8 +49,8 @@ document.addEventListener("beforecopy", function (event) {
 ```
 
 3. TODO
-   - 修复浏览器会报跨域的错误
-   - 实现 background.js（比如计下数/记录最近三条记录，点击插件进行弹出）
-   - 找一个帅气侧漏的 logo
+   - 修复浏览器会报跨域的错误  
+   - 实现 background.js（比如计下数/记录最近三条记录，点击插件进行弹出） (2023-11-5 finished partial)
+   - 找一个帅气侧漏的 logo （2023-11-5 done）
 
 ---
