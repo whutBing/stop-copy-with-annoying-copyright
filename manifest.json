@@ -9,5 +9,11 @@
       "js": ["src/main.js"]
     }
   ],
-  "host_permissions": ["https://www.juejin.cn/*", "https://blog.csdn.net/*"]
+  "host_permissions": ["https://www.juejin.cn/*", "https://blog.csdn.net/*"],
+  "icons": {
+    "16": "assets/16stop.png",
+    "32": "assets/32stop.png",
+    "64": "assets/64stop.png",
+    "128": "assets/128stop.png"
+  }
 }
