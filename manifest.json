@@ -5,7 +5,7 @@
   "description": "一个可以阻挡复制时带有多余版权信息的插件",
   "content_scripts": [
     {
-      "matches": ["https://*/*"],
+      "matches": ["https://juejin.cn/post/*", "https://blog.csdn.net/*"],
       "js": ["src/main.js"]
     }
   ],
@@ -26,3 +26,4 @@
     "128": "assets/128stop.png"
   }
 }
+
