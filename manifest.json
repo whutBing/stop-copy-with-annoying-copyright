@@ -1,19 +1,21 @@
 {
   "manifest_version": 3,
-  "name": "copy-without-copyright",
+  "name": "copy-without-right",
   "version": "1.0.1",
   "description": "一个可以阻挡复制时带有多余版权信息的插件",
-  "content_scripts": [
-    {
-      "matches": ["https://juejin.cn/post/*", "https://blog.csdn.net/*"],
-      "js": ["src/main.js"]
-    }
-  ],
   "background": {
     "service_worker": "src/service_worker.js"
   },
-  "host_permissions": ["https://www.juejin.cn/*", "https://blog.csdn.net/*"],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "permissions": [
+    "storage",
+    "scripting",
+    "tabs"
+  ],
   "action": {
+    "default_popup": "src/popup.html",
     "default_icon": {
       "16": "assets/16stop.png",
       "32": "assets/32stop.png"
@@ -24,6 +26,7 @@
     "32": "assets/32stop.png",
     "64": "assets/64stop.png",
     "128": "assets/128stop.png"
-  }
+  },
+  "options_page": "src/options.html"
 }
 

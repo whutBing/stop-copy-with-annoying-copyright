@@ -2,14 +2,22 @@ var hasRegistered = false;
 var copyTimes = 0;
 console.log("begin!!!!!");
 document.addEventListener("beforecopy", async function (event) {
+  debugger;
   console.log("before copy~~~");
   if (!hasRegistered) {
     hasRegistered = true;
-    // register once event
-    document.oncopy = (event) =>
-      event.clipboardData.setData("text", window.getSelection(0).toString());
+    document.oncopy = (event) => {
+      const selectedText = window.getSelection(0).toString();
+      event.clipboardData.setData("text", selectedText);
+
+      // 发送复制次数和内容到 service worker
+      chrome.runtime.sendMessage({
+        type: "badge",
+        data: ++copyTimes,
+        content: selectedText.substring(0, 50) + (selectedText.length > 50 ? '...' : '') // 只保存前50个字符
+      });
+    }
   }
-  await chrome.runtime.sendMessage({ type: "badge", data: ++copyTimes });
 });
 
 // 技术进行badge显示

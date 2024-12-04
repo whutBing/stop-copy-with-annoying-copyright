@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title align="center">URL 管理</title>
+    <style>
+        body {
+            width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .url-item {
+            display: flex;
+            margin-bottom: 10px;
+            gap: 10px;
+            align-items: center;
+            position: relative;
+        }
+        .url-input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .url-input:focus {
+            outline: none;
+            border-color: #1a73e8;
+            box-shadow: 0 0 0 2px rgba(26,115,232,0.2);
+        }
+        .add-btn, .delete-btn {
+            padding: 8px 16px;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .add-btn {
+            background-color: #1a73e8;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .delete-btn {
+            background-color: #dc3545;
+        }
+        .add-btn:hover {
+            background-color: #1557b0;
+        }
+        .delete-btn:hover {
+            background-color: #c82333;
+        }
+        .empty-message {
+            color: #666;
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .saved-tip {
+            position: absolute;
+            right: 80px;
+            color: #28a745;
+            font-size: 12px;
+            animation: fadeOut 1s forwards;
+        }
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <h2>URL 管理</h2>
+    <p>在下方添加需要启用插件的网站域名</p>
+    <div id="urlList"></div>
+    <button id="addUrlBtn" class="add-btn">添加新 URL</button>
+    <script src="options.js"></script>
+</body>
+</html> 

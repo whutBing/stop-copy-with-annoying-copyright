@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            width: 300px;
+            padding: 10px;
+        }
+        .copy-record {
+            margin: 5px 0;
+            padding: 5px;
+            border-bottom: 1px solid #eee;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            position: relative;
+            padding-right: 30px;
+        }
+        .count {
+            font-weight: bold;
+            color: #1a73e8;
+        }
+        #recentCopies {
+            max-height: 100px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }   
+        .settings-section {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+        #settingsBtn {
+            width: 100%;
+            padding: 8px;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #settingsBtn:hover {
+            background-color: #1557b0;
+        }
+        .delete-btn {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #dc3545;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        .copy-record:hover .delete-btn {
+            opacity: 1;
+        }
+        .preview.editing {
+            border: 1px solid #1a73e8;
+            padding: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h3>复制统计</h3>
+    <p>今日复制次数：<span id="copyCount" class="count">0</span></p>
+    <h4>最近复制记录：</h4>
+    <div id="recentCopies"></div>
+    
+    <!-- 添加设置按钮 -->
+    <div class="settings-section">
+        <button id="settingsBtn">URL 管理</button>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html> 
