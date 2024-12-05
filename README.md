@@ -49,8 +49,9 @@ document.addEventListener("beforecopy", function (event) {
 ```
 
 3. TODO
-   - 修复浏览器会报跨域的错误
-   - 实现 background.js（比如计下数/记录最近三条记录，点击插件进行弹出）
+   - ~~修复浏览器会报跨域的错误~~
+   - ~~实现 background.js（比如计下数/记录最近三条记录，点击插件进行弹出）~~
    - 找一个帅气侧漏的 logo
-
+   - popup历史记录支持复制（目前复制不全）
+   - popup 可以定位到原始网页和位置（有点难哦～）
 ---
